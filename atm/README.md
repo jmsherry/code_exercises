@@ -1,11 +1,11 @@
-#Cash Machine
+# Cash Machine
 
 This is the big one!! :)
 
-##Task
+## Task
 Make a command-line cash machine.
 
-##Spec
+## Spec
 The cash machine will:
 1. Have a process where the user enters a username and password
 2. The process will then compare against the **collection** of users provided. (A collection is an array of objects)
