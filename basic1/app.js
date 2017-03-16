@@ -11,9 +11,20 @@ function calculate(){
     if (err) { // Handle error
       return err;
     }
-    if (!parseFloat(amount)){
-      console.log('Format Error: Please enter an amount')
+    var num = Number.parseInt(result.amount, 10);
+    var remaining;
+    if (!num){
+      console.log('Format Error: Please enter an amount in whole pounds');
+      return calculate();
     }
+    _total += num;
+    console.log('Total: '+_total);
+    if(_hasBudget) {
+      remaining = _budget - _total;
+      console.log('Budget: '+_budget);
+      console.log('Remaining Budget: ' + remaining);
+    }
+    return calculate();
   });
 }
 
@@ -42,11 +53,13 @@ function getBudget(){
     }
 
   });
+}
 
 function start(){
   console.log('Welcome to the shopping calculator.')
   console.log('Type an amount into the prompt to see your total.');
   console.log('Type \'exit\' at any time to leave the program');
   getBudget();
-
 }
+
+start();
