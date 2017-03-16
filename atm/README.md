@@ -8,7 +8,7 @@ Make a command-line cash machine.
 ##Spec
 The cash machine will:
 1. Have a process where the user enters a username and password
-2. You will need to construct some dummy users (a collection - an array of objects - is the best way)
+2. The process will then compare against the **collection** of users provided. (A collection is an array of objects)
 3. If either the username or password doesn't match then the user should be informed and the process restarted
 4. The user gets 3 attempts before the system withholds the card, prompts the user and exits (going back to the start of the whole process)
 5. If the user is successful in authenticating then they go through to a screen that asks them if they would like another service (0 = No, 1 = balance, 2 = withdraw).
