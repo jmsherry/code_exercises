@@ -7,5 +7,5 @@ Reference: [http://www.astrologizeme.com/your_chinese_sign.shtml](http://www.ast
 To validate the year that the user types in, you can use the yearRegex (Regular Expression) in the file, like so:
 
 ```javascript
-yearRegex.test(yearString);
+var isValidYear = yearRegex.test(yearString);
 ```
